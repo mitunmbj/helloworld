@@ -21,7 +21,8 @@ stages {
 
 post {
     always {
-slackUploadFile channel: 'https://mbjinternational.slack.com/archives/C01A9856B1Q', credentialId: 'slack token', filePath: '/var/jenkins_home/workspace/slack/helloworld.html', initialComment: 'unittest'    }
+slackUploadFile channel: 'https://mbjinternational.slack.com/archives/C01A9856B1Q', credentialId: 'slack token', filePath: '/var/jenkins_home/workspace/slack/helloworld.html', initialComment: 'unittest'  
+    }
     }
 
 }
