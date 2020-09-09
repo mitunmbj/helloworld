@@ -21,7 +21,9 @@ stages {
 
 post {
     always {
-slackUploadFile channel: 'https://mbjinternational.slack.com/archives/C01A9856B1Q', credentialId: 'slack', filePath: '/var/jenkins_home/workspace/slack/helloworld.html', initialComment: 'Unittest'  
+
+      sh 'curl -F file=@/var/jenkins_home/workspace/slack/helloworld.html -H "Authorization: Bearer xoxp-1349477765779-1334528865959-1351909525091-face6d736a0b5e070f79bce4ad713584" -F channels=C01A9856B1Q https://slack.com/api/files.upload'
+
     }
     }
 
